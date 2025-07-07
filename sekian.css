@@ -9,6 +9,16 @@ html {
     box-sizing: border-box;
 }
 
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.content h1, .content h3 {
+  animation: fadeIn 1s ease-out;
+}
+
+
 #home {
   scroll-margin-top: 100px;
 }
@@ -18,6 +28,11 @@ body {
     background-color: #FFF4EA;
     font-family: 'Poppins', sans-serif;
 }
+
+.content h1, .content h3 {
+  animation: fadeIn 1s ease-out;
+}
+
 
 .hero {
     width: 100%;
@@ -174,6 +189,11 @@ h4 {
     transform: translateY(-5px);
 }
 
+.download-btn:hover, .button-two:hover {
+  box-shadow: 0 0 10px #feb47b;
+}
+
+
 #project {
     padding: 50px 20px;
     text-align: center;
@@ -183,6 +203,14 @@ h4 {
     color: #C96868;
     font-size: 2.5em;
     margin-bottom: 30px;
+}
+
+.project-card {
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
 }
 
 .project-container {
@@ -230,6 +258,13 @@ h4 {
     border-radius: 25px;
     font-weight: bold;
 }
+
+.project-card:nth-child(1) { animation-delay: 0.2s; }
+.project-card:nth-child(2) { animation-delay: 0.4s; }
+.project-card:nth-child(3) { animation-delay: 0.6s; }
+.project-card:nth-child(4) { animation-delay: 0.4s; }
+.project-card:nth-child(5) { animation-delay: 0.6s; }
+
 
 #skills {
     padding: 50px 20px;
